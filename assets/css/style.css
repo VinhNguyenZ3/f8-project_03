@@ -10,6 +10,8 @@
 html,
 body {
   scroll-behavior: smooth;
+  height: 5000px;
+  background-color: #fff;
 }
 
 html {
@@ -18,7 +20,6 @@ html {
 
 body {
   font-size: 1.6rem;
-  background-color: var(--primary-color);
   font-family: "Sora", sans-serif;
 }
 a {
@@ -51,11 +52,26 @@ a {
   opacity: 0.9;
   cursor: pointer;
 }
+.section-heading {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #10375c;
+}
+.section-desc {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.75;
+  margin-top: 1.8rem;
+  color: #575f66;
+}
+
 /* Header */
 .header {
-  padding: 30px ;
+  padding-top: 30px;
   height: 100vh;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important;
 }
 .header-top {
   display: flex;
@@ -216,7 +232,89 @@ a {
 
 .hero__img:last-child {
   width: 210px;
-  height: 400px;
+  height: 410px;
   margin-left: -6px;
   z-index: 1;
+}
+/* Service */
+.service {
+  padding: 170px 0;
+}
+
+.service__heading,
+.service__desc {
+  text-align: center;
+}
+.service__desc {
+  width: 468px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.service-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+.service__img {
+  width: 570px;
+  height: 570px;
+  object-fit: cover;
+  border-radius: 1.2rem;
+}
+
+.service__list {
+  padding-bottom: 55px;
+}
+
+.service-item {
+  display: flex;
+  width: 470px;
+  padding: 22px;
+  border-radius: 1rem;
+  background-color: #fff;
+  transition: 0.25s;
+}
+
+.service-item:hover {
+  position: relative;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.05);
+}
+.service-item:hover .service-item__icon {
+  background: #2e80ce;
+  color: #fff;
+}
+
+.service-item__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.045);
+  background: #eff6fd;
+  color: var(--primary-color);
+}
+
+.service-item__body {
+  margin-left: 20px;
+}
+
+.service-item__heading {
+  font-size: 1.8rem;
+  line-height: 1.27;
+  color: #10375c;
+  font-weight: 600;
+}
+
+.service-item_desc {
+  color: #575f66;
+  margin-top: 8px;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.75;
 }
