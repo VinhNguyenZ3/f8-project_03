@@ -10,7 +10,7 @@
 html,
 body {
   scroll-behavior: smooth;
-  height: 5000px;
+  height: 7000px;
   background-color: #fff;
 }
 
@@ -588,6 +588,7 @@ a {
   column-gap: 30px;
   max-width: 570px;
 }
+
 .news-item {
   flex: 1;
   border-radius: 12px;
@@ -595,20 +596,34 @@ a {
   overflow: hidden;
   transition: 0.25s;
 }
+
 .news-item:hover {
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.05);
-  transform: translateY(-12px);
+  transform: translateY(-6px);
 }
+
 .news-item:hover .news-item__body {
   border-color: #fff;
 }
+
 .news-item__thumb {
-  width: 100%;
   height: 172px;
+  overflow: hidden;
+}
+
+.news-item__img {
+  display: block;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
   object-fit: cover;
-  display: block;
+  transition: 0.25s;
 }
+
+.news-item__img:hover {
+  transform: scale(1.1);
+}
+
 .news-item__body {
   border-radius: 0px 0px 12px 12px;
   border: 1px solid #e8ebee;
@@ -616,8 +631,8 @@ a {
   border-width: 0 1px 1px 1px;
   padding: 24px 24px 16px;
   transition: 0.25s;
-
 }
+
 .news-item__title {
   color: #10375c;
   cursor: pointer;
@@ -625,6 +640,7 @@ a {
   font-weight: 600;
   line-height: 1.62;
 }
+
 .news-item__desc {
   color: #575f66;
   margin-top: 10px;
@@ -632,6 +648,7 @@ a {
   font-weight: 300;
   line-height: 1.71;
 }
+
 .news-item__more {
   display: inline-block;
   margin-top: 12px;
@@ -640,7 +657,50 @@ a {
   font-weight: 400;
   line-height: 1.6;
 }
+
 .news-item__more:hover {
   color: #2E80CE;
 }
 
+/* Appointment */
+.appointment {
+  margin-top: 85px 0 170px;
+}
+
+.appointment__inner {
+  background: #F6FBFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  padding: 100px 70px;
+}
+
+.appointment__heading {
+  position: relative;
+  padding-bottom: 18px;
+}
+
+.appointment__heading::before {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 136px;
+  height: 2px;
+  background: #2E80CE;
+  
+}
+
+.appointment__desc {
+  margin-top: 18px;
+  max-width: 617px;
+  text-align: center;
+}
+
+.appointment__cta {
+  margin-top: 38px;
+}
